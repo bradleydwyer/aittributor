@@ -86,6 +86,13 @@ pub const KNOWN_AGENTS: &[Agent] = &[
         breadcrumb_dir: None,
         breadcrumb_ext: None,
     },
+    Agent {
+        process_names: &[],
+        env_vars: &[("KILO_CODE_ACTIVE", "true")],
+        email: "Kilo Code <noreply@kilocode.ai>",
+        breadcrumb_dir: None,
+        breadcrumb_ext: None,
+    },
 ];
 
 impl Agent {
