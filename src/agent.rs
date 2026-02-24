@@ -86,6 +86,13 @@ pub const KNOWN_AGENTS: &[Agent] = &[
         breadcrumb_dir: None,
         breadcrumb_ext: None,
     },
+    Agent {
+        process_names: &["augment"],
+        env_vars: &[],
+        email: "Augment Code <noreply@augmentcode.com>",
+        breadcrumb_dir: None,
+        breadcrumb_ext: None,
+    },
 ];
 
 impl Agent {
