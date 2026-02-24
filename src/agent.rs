@@ -86,6 +86,13 @@ pub const KNOWN_AGENTS: &[Agent] = &[
         breadcrumb_dir: None,
         breadcrumb_ext: None,
     },
+    Agent {
+        process_names: &["cody"],
+        env_vars: &[],
+        email: "Sourcegraph Cody <cody@sourcegraph.com>",
+        breadcrumb_dir: None,
+        breadcrumb_ext: None,
+    },
 ];
 
 impl Agent {
