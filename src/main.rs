@@ -333,6 +333,19 @@ mod tests {
     }
 
     #[test]
+    fn test_find_agent_by_env_roo_code() {
+        unsafe {
+            std::env::set_var("ROO_CODE_ACTIVE", "true");
+        }
+        let agent = Agent::find_by_env();
+        assert!(agent.is_some());
+        assert!(agent.unwrap().email.contains("Roo Code"));
+        unsafe {
+            std::env::remove_var("ROO_CODE_ACTIVE");
+        }
+    }
+
+    #[test]
     fn test_append_trailers() {
         let mut file = NamedTempFile::new().unwrap();
         writeln!(file, "Initial commit").unwrap();
